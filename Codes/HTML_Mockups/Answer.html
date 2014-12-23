@@ -1,0 +1,67 @@
+<html>
+<head>
+<link rel="stylesheet" href="dist/css/bootstrap.css">
+<link rel="stylesheet" href="styles/QNAPStyles.css">
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header"> <a class="navbar-brand" href="#">QNAPublisher</a> </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <form class="navbar-form navbar-left">
+        <input type="text" class="form-control" placeholder="Search">
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li> <a href="#">Sign up</a> </li>
+        <li> <a href="#">Login</a> </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  <div class="page-header">
+    <div class="col-md-4"> </div>
+    <div class="btn-toolbar">
+      <button type="button" class="btn btn-success btn-md"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> Questions</button>
+      <button type="button" class="btn btn-success btn-md"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span> Topics</button>
+      <button type="button" class="btn btn-success btn-md" style="margin-left: 20%"><span class="glyphicon glyphicon-hand-up" aria-hidden="true"></span> Any Question</button>
+    </div>
+  </div>
+  <div class="row questions-container center-block">
+    <h3>Title Of the question</h3>
+    <div class="row question-container">
+      <div class="col-md-12">
+        <div class="row"><span>Description of the question</span></div>
+        <div class="row">
+          <div class="label label-default tag-container">android</div>
+          <div class="label label-default tag-container">angularjs</div>
+        </div>
+      </div>
+    </div>
+    <div class="row question-container col-md-offset-1">
+      <h3>Answers</h3>
+      <div class="row">
+        <div class="col-md-12"> <span>Description of the answer</span>
+          <div class="row">
+            <div class="col-md-2 "> <span class="label label-primary">Rate</span> </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3"><a href="edit">Edit</a></div>
+          </div>
+          <div class="row">
+          	html editor
+          </div>
+          <button type="submit" class="btn btn-success">Answer</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="text-muted text-center"><a href="">About us</a> | <a href=""> Contact us</a> </p>
+  </div>
+</footer>
+</body>
+</html>
