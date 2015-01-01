@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js">
+<html class="no-js" ng-app="qnapublisherclientApp">
 
 <head>
     <meta charset="utf-8">
@@ -13,12 +13,11 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/QNAPStyles.css">
     <!-- endbuild -->
 </head>
 
-<body ng-app="qnapublisherclientApp">
+<body ng-controller="masterController">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -30,15 +29,16 @@
                 <a class="navbar-brand" href="#">QNAPublisher</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
-                <form class="navbar-form navbar-left">
-                    <input type="text" class="form-control" placeholder="Search">
+                <form class="navbar-form navbar-left" ng-submit="search()">
+                    <input type="text" class="form-control" placeholder="Search" ng-model="keyWord">
                 </form>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="#">Sign up</a>
+                        <a href ng-click="navigate(app.meta.signup.rootRoute)">Sign up</a>
+                        {{keyWord}}
                     </li>
                     <li>
-                        <a href="#">Login</a>
+                        <a href ng-click="navigate(app.meta.login.rootRoute)">Login</a>
                     </li>
 
                 </ul>
@@ -50,15 +50,15 @@
             <div class="col-md-4">
             </div>
             <div class="btn-toolbar">
-                <button type="button" class="btn btn-success btn-md"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> Questions</button>
+                <button type="button" ng-click="navigate(app.meta.questions.rootRoute)" class="btn btn-success btn-md"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> Questions</button>
                 <button type="button" class="btn btn-success btn-md"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span> Topics</button>
-                <button type="button" class="btn btn-success btn-md" style="margin-left: 20%"><span class="glyphicon glyphicon-hand-up" aria-hidden="true"></span> Any Question</button>
+                <button type="button" ng-click="navigate(app.meta.questions.askQuestion.rootRoute)" class="btn btn-success btn-md" style="margin-left: 20%"><span class="glyphicon glyphicon-hand-up" aria-hidden="true"></span> Any Question</button>
 
             </div>
         </div>
     </div>
-    <div class="container">
-        
+    <div ng-view>
+
     </div>
     <footer class="footer">
         <div class="container">
@@ -118,6 +118,7 @@
     <script src="components/angular-sanitize/angular-sanitize.js"></script>
     <script src="components/angular-touch/angular-touch.js"></script>
     <script src="components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="components/bootstrap/dist/js/bootstrap.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -126,6 +127,43 @@
     <script src="scripts/controllers/main.js"></script>
     <script src="scripts/controllers/about.js"></script>
     <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/meta.js -->
+    <script src="scripts/landingview/landingview-meta.js"></script>
+    <script src="scripts/search/search-meta.js"></script>
+    <script src="scripts/login/login-meta.js"></script>
+    <script src="scripts/signup/signup-meta.js"></script>
+    <script src="scripts/questions/questions-meta.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/directives.js -->
+    <script src="scripts/landingview/topquestion-directive.js"></script>
+    <script src="scripts/search/result-directive.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/factories.js -->
+    <script src="scripts/landingview/landingview-factory.js"></script>
+    <script src="scripts/search/search-factory.js"></script>
+    <script src="scripts/login/login-factory.js"></script>
+    <script src="scripts/signup/signup-factory.js"></script>
+    <script src="scripts/questions/questions-factory.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/controllers.js -->
+    <script src="scripts/master/master-controller.js"></script>
+    <script src="scripts/landingview/landingview-controller.js"></script>
+    <script src="scripts/search/search-controller.js"></script>
+    <script src="scripts/login/login-controller.js"></script>
+    <script src="scripts/signup/signup-controller.js"></script>
+    <script src="scripts/questions/questions-controller.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/services.js -->
+    <script src="scripts/landingview/landingview-service.js"></script>
+    <script src="scripts/search/search-service.js"></script>
+    <script src="scripts/questions/questions-service.js"></script>
+    <!-- endbuild -->
+
 </body>
 
 </html>

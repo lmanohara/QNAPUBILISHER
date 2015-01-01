@@ -2,7 +2,8 @@
     Search controller responsible for handling search view
 */
 
-app.controller('searchController', ["$scope",
-    function ($scope) {
-
-}]);
+searchModule.controller('searchController', ['$scope', '$route', 'searchFactory',
+    function ($scope, $route, searchFactory) {
+        var query = $route.current.params.q;
+        $scope.search = searchFactory.init();
+    }]);

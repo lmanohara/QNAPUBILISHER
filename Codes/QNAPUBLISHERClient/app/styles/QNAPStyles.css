@@ -49,14 +49,39 @@ code {
     padding-top: 2%;
     padding-bottom: 2%;
 }
+.status-container{
+	background-color:#666;
+	padding:5px;
+}
+.center-content{
+	text-align:center;
+}
+.
 .views-container {
     min-width: 30px;
     line-height: 2;
     border-radius: 30px;
 }
+
+.status-answer-count{
+	min-width: 30px;
+    line-height: 2;
+    border-radius: 30px;
+	color:#666;
+	background-color:#FFF;
+}
+.status-answer-text{
+	color:#FFF;
+}
+		
 .tag-container {
     padding: .4em .8em .5em;
     font-size: 80%;
+    margin-right: 4px;
+}
+
+.username-text{
+	text-align:right;	
 }
 
 .post-question{

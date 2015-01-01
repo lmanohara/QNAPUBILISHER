@@ -1,0 +1,17 @@
+<div class="row question-container">
+    <div class="col-md-2">
+        <div class="row center-block"><span class="badge views-container">{{question.answerCount}}</span> 
+        </div>
+        <div class="row"><span>Answers</span> 
+        </div>
+    </div>
+    <div class="col-md-10">
+        <div class="row">{{question.title}}</div>
+        <div class="row">
+            <div class="label label-default tag-container" ng-repeat="tag in question.tags">
+                {{tag.name}}
+            </div>
+            
+        </div>
+    </div>
+</div>
