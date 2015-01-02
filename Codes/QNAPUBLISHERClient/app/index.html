@@ -52,7 +52,7 @@
             <div class="btn-toolbar">
                 <button type="button" ng-click="navigate(app.meta.questions.rootRoute)" class="btn btn-success btn-md"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> Questions</button>
                 <button type="button" class="btn btn-success btn-md"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span> Topics</button>
-                <button type="button" ng-click="navigate(app.meta.questions.askQuestion.rootRoute)" class="btn btn-success btn-md" style="margin-left: 20%"><span class="glyphicon glyphicon-hand-up" aria-hidden="true"></span> Any Question</button>
+                <button type="button" ng-click="navigate(app.meta.askQuestion.rootRoute)" class="btn btn-success btn-md" style="margin-left: 20%"><span class="glyphicon glyphicon-hand-up" aria-hidden="true"></span> Any Question</button>
 
             </div>
         </div>
@@ -139,6 +139,7 @@
     <!-- build:js({.tmp,app}) scripts/directives.js -->
     <script src="scripts/landingview/topquestion-directive.js"></script>
     <script src="scripts/search/result-directive.js"></script>
+    <script src="scripts/general/question-directive.js"></script>
     <!-- endbuild -->
 
     <!-- build:js({.tmp,app}) scripts/factories.js -->

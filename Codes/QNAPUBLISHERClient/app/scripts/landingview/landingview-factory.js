@@ -2,6 +2,7 @@ landingViewModule.factory('landingViewFactory', ['$route', 'landingViewService',
     function ($route, landingViewService) {
         var landingView = {};
         var question = {
+            id : 1,
             'answerCount': 4,
             'title': 'How to create angular application?',
             'tags': [{

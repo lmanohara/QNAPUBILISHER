@@ -49,6 +49,15 @@ code {
     padding-top: 2%;
     padding-bottom: 2%;
 }
+
+.answer-container{
+	border-bottom: 1px solid;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+.answer-from{
+	margin-top:5%;
+}	
 .status-container{
 	background-color:#666;
 	padding:5px;

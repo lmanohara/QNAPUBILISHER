@@ -21,12 +21,13 @@ var app = angular
     'searchModule',
     'loginModule',
     'signupModule',
-    'questionsModule'
+    'questionsModule',
+    'questionModule'
 
 
   ])
     .config(function ($routeProvider) {
-        var routes = ['search', 'login', 'signup', 'questions'];
+        var routes = ['search', 'login', 'signup', 'questions', 'askQuestion', 'question'];
 
         for (var routeElement in routes) {
             $routeProvider.when(app.meta[routes[routeElement]].rootRoute, {
@@ -35,10 +36,10 @@ var app = angular
             })
         }
 
-        $routeProvider.when(app.meta.questions.askQuestion.rootRoute, {
-            templateUrl: app.meta.questions.askQuestion.templateUrl,
-            controller: app.meta.questions.askQuestion.controller
-        })
+//        $routeProvider.when(app.meta.questions.askQuestion.rootRoute, {
+//            templateUrl: app.meta.questions.askQuestion.templateUrl,
+//            controller: app.meta.questions.askQuestion.controller
+//        })
 
         $routeProvider
             .when('/', {
