@@ -1,6 +1,6 @@
 app.controller('masterController', ['$scope', '$route', '$location',
     function ($scope, $route, $location) {
-        var keyWord = '';
+        
         $scope.app = {};
         $scope.app.meta = app.meta;
 
@@ -9,7 +9,9 @@ app.controller('masterController', ['$scope', '$route', '$location',
         $scope.keyWord = '';
 
         $scope.search = function () {
-            $location.path('/search/q/' + $scope.keyWord);
+            var keyWord = $scope.keyWord;
+            
+            $location.path('/search/q/' + keyWord.replace(/ /g, '+'));
         }
 
         $scope.navigate = function (path) {

@@ -16,12 +16,20 @@ questionsModule.factory('questionsFactory', ['$route',
             'user': 'lahiru manohara',
             'description': "This is example description"
         };
+        
+        var answer = {
+            id : 1,
+            'rate' : 5,
+            'description': "angular is most awesome framework for front end"
+        }
 
         var questions = [question];
+        var answers = [answer];
 
         return {
             init: function () {
                 questionsObject.questions = questions;
+                questionsObject.answers = answers;
                 return questionsObject;
             }
         };

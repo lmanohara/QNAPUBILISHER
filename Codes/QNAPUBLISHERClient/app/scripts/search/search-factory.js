@@ -14,12 +14,27 @@ searchModule.factory('searchFactory', ['$route', 'searchService',
             'user': 'lahiru manohara'
         };
 
-        var questions = [question];
+
+        function getQuestionsList() {
+            var questions = [];
+            var searchTerm = $route.current.params.q;
+            var searchResult = searchService.getSearchResult();
+            searchResult.query({}, {
+                term: searchTerm
+            }).$promise.then(function (response) {
+                angular.forEach(response, function (object) {
+                    this.push(object);
+                }, questions);
+            }, function (error) {
+                //console.log(error);
+            });
+            //console.log(questions);
+            return questions;
+        }
 
         return {
             init: function () {
-
-                search.questions = questions;
+                search.questions = getQuestionsList();
                 return search;
             }
         };

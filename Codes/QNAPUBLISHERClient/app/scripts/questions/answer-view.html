@@ -1,13 +1,13 @@
 <div class="row answer-container">
     <div class="col-md-1">
-        <div class="row center-content"><a ng-click="incrementHours()" class="btn btn-link"><span class="glyphicon glyphicon-chevron-up"></span></a> 
+        <div class="row center-content"><a ng-click="incrementRate()" class="btn btn-link"><span class="glyphicon glyphicon-chevron-up"></span></a> 
         </div>
-        <div class="row"> <span class="form-control text-center ng-pristine ng-valid">1 </span> 
+        <div class="row"> <span class="form-control text-center ng-pristine ng-valid"><span ng-bind="answer.rate" ng-model="answer.rate" ng-change="change()"></span> 
         </div>
-        <div class="row center-content"> <a ng-click="decrementHours()" class="btn btn-link"><span class="glyphicon glyphicon-chevron-down"></span></a> 
+        <div class="row center-content"> <a ng-click="decrementRate()" class="btn btn-link"><span class="glyphicon glyphicon-chevron-down"></span></a> 
         </div>
     </div>
-    <div class="col-md-10"> <span>Description of the answer</span>
+    <div class="col-md-10"> <span>{{answer.description}}</span>
         <div class="row">
             <div class="col-md-3"><a href="edit">Edit</a>
             </div>
